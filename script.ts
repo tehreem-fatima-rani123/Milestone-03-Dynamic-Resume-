@@ -10,7 +10,7 @@
 //     const experienceElement = document.getElementById('experience') as HTMLInputElement;
 //     const skillsElement = document.getElementById('skills') as HTMLInputElement;
 
-// if (nameElement && emailElement && phoneElement && educationElement && experienceElement && skillsElement ) {
+//  if (nameElement && emailElement && phoneElement && educationElement && experienceElement && skillsElement ) {
 
 //     const name  =  nameElement.value;
 //     const email =  emailElement.value;
@@ -52,12 +52,15 @@
 
 
 
-const form = document.getElementById('resumeForm') as HTMLFormElement ;
-const resumeDisplayElement = document.getElementById('resumeOutput') as HTMLDivElement;
+const form1= document.getElementById('resumeForm') as HTMLFormElement ;
+const resumeDisplayElement1 = document.getElementById('resumeOutput') as HTMLDivElement;
 
-form.addEventListener('submit' , (event: Event) => {
+form1.addEventListener('submit' , (event: Event) => {
     event.preventDefault();
     
+
+
+
 
     const name = (document.getElementById('name') as HTMLInputElement).value
     const email = (document.getElementById('email') as HTMLInputElement).value
@@ -71,8 +74,8 @@ const resumeHTML = `
 <h2><b>Resume</b></h2>
 <h3>Personal Informtion</h3>
 <p><b>Name: </b>${name}</o>
-<p><b>Name: </b>${email}</o>
-<p><b>Name: </b>${phone}</o>
+<p><b>Email: </b>${email}</o>
+<p><b>Phone: </b>${phone}</o>
 
 <h3>Education</h3>
 <p>${education}</p>
@@ -83,8 +86,8 @@ const resumeHTML = `
 <h3>Skills</h3>
 <p>${skills}</p>
 `;
-if(resumeDisplayElemente){
-    resumeDisplayElemente.innerHTML = resumeHTML;
+if(resumeDisplayElement1){
+    resumeDisplayElement1.innerHTML = resumeHTML;
 
 }else {
     console.error('the resume output elements are missing')
